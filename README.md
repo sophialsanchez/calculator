@@ -1,6 +1,6 @@
 # Sparkcentral Calculator v.1.0
 
-Calculator to evaluate equations. Handles addition, subtraction, multiplication, division, and modulo, and order of operations.
+Calculator to evaluate equations, returning a float. Handles addition, subtraction, multiplication, division, and modulo, and order of operations.
 
 ex.
 To create an instance of the calculator:
