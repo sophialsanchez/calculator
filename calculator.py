@@ -53,17 +53,3 @@ class Calculator(object):
     def modulo(self, num1, num2):
         """Takes as arguments two numbers and returns the modulo."""
         return(num1 % num2)
-
-myCalculator = Calculator()
-
-
-
-# print(myCalculator.multiply(2,3))
-# print(myCalculator.divide(2,3))
-# print(myCalculator.add(2,3))
-# print(myCalculator.subtract(2,3))
-# print(myCalculator.modulo(2,3))
-
-print(myCalculator.evaluate("2 + -1 + 1 * 0 % 3 + 2 * 2 - 1")) # answer is 4
-print(myCalculator.evaluate("2 * -23423432"))
-print(myCalculator.evaluate("2 - -23423432"))
