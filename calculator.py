@@ -1,7 +1,6 @@
 class Calculator(object):
     """A calculator that performs operations (multiply, divide, modulo, add, subtract)
-       using the correct order of operations.
-    """
+       using the correct order of operations."""
     def __init__(self):
         self.operator_dictionary = {
         '*': self.multiply,
@@ -21,17 +20,17 @@ class Calculator(object):
     def process_operations(self, equation, operator_list):
         """Takes as arguments an equation as a string and a list of operations
            and returns the equation with only those operations performed."""
-        # throws a keyerror if operators not in the dictionary given as input
+        # throws a descriptive keyerror if operator is not in the dictionary
         for operator in operator_list:
             if operator not in self.operator_dictionary:
-                raise KeyError("The operator %s is not current supported by the calculator." % operator)
-        index = 0
+                raise KeyError("The operator %s is not currently supported by the calculator." % operator)
+        index = 1
         while index != len(equation):
             if equation[index] in operator_list:
                 answer = self.operator_dictionary[(equation[index])](float(equation[index-1]), float(equation[index+1]))
                 equation[index-1:index+2] = [str(answer)]
             else:
-                index += 1
+                index += 2
         return(equation)
     
     def multiply(self, num1, num2):
